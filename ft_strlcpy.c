@@ -6,10 +6,9 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 10:44:23 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/17 12:58:42 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/17 13:23:25 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

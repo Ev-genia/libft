@@ -6,10 +6,9 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 11:39:15 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/16 16:43:17 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/17 13:06:45 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

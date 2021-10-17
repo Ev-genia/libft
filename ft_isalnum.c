@@ -6,10 +6,9 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 11:38:44 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/16 11:58:19 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/17 13:05:10 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
 int	ft_isalpha(int a);
 int	ft_isdigit(int a);

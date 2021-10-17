@@ -6,10 +6,10 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 11:38:08 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/17 12:20:34 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/17 13:06:27 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
