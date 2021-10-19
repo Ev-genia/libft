@@ -6,7 +6,7 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 11:41:52 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/19 17:54:11 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/19 18:19:32 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -36,4 +36,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 #endif
