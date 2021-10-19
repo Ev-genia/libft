@@ -6,49 +6,37 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 11:56:39 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/19 15:59:30 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/19 17:35:58 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long int	ft_strnbr(const char *str)
+int	ft_isspace(char c)
 {
-	long int	nbr;
-	int			k;
-	int			i;
-
-	nbr = 0;
-	k = 1;
-	i = 0;
-	while (*str >= '0' && *str <= '9')
-	{
-		if (nbr < 0 && nbr * 10 > nbr)
-			return (0);
-		if (nbr > nbr * 10)
-			return (-1);
-		nbr = nbr * k + (*str - '0');
-		k = 10;
-		str++;
-		i++;
-	}
-	return (nbr);
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'\
+		|| c == ' ');
 }
 
 int	ft_atoi(const char *str)
 {
-	int			minus;
-	long int	nbr;
+	int					minus;
+	unsigned long int	nbr;
 
-	while (*str == '\t' || *str == '\n' || *str == '\v'\
-		|| *str == '\f' || *str == '\r' || *str == ' ')
+	while (*str && ft_isspace(*str))
 		str++;
 	minus = 1;
 	if (*str == '-')
-	{
 		minus = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	nbr = 0;
+	while (*str >= '0' && *str <= '9')
+	{
+		nbr = nbr * 10 + (*str - '0');
+		if (nbr > 9223372036854775807 && minus == 1)
+			return (-1);
+		if (nbr > 9223372036854775807 && minus == -1)
+			return (0);
 		str++;
 	}
-	else if (*str == '+')
-		str++;
-	nbr = ft_strnbr(str);
-	return ((int)(nbr * minus));
+	return ((int)nbr * minus);
 }
