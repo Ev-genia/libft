@@ -6,7 +6,7 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 13:02:28 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/17 17:14:16 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/19 19:24:24 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t buff)
 
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
-	if (buff < len_dst)
+	if (buff <= len_dst)
 		return (buff + len_src);
 	i = 0;
 	while (dst[i] != '\0')
