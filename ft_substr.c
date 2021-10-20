@@ -6,7 +6,7 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 19:32:21 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/20 19:35:13 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/20 19:55:38 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!dest)
 		return (NULL);
 	i = 0;
-	if (start >= 0 && start <= ft_strlen(s))
+	while (i < len)
 	{
-		while (i < len)
-		{
-			dest[i] = s[start + i];
-			i++;
-		}
+		dest[i] = s[start + i];
+		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
