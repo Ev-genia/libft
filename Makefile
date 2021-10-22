@@ -6,7 +6,7 @@
 #    By: mlarra <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 11:55:00 by mlarra            #+#    #+#              #
-#    Updated: 2021/10/22 15:33:22 by mlarra           ###   ########.fr        #
+#    Updated: 2021/10/22 15:42:51 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS	= ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c\
 		  ft_atoi.c		ft_calloc.c		ft_strdup.c		ft_substr.c\
 		  ft_strjoin.c	ft_strtrim.c	ft_split.c		ft_itoa.c\
 		  ft_strmapi.c	ft_striteri.c	ft_putchar_fd.c	ft_putstr_fd.c\
+		  ft_putendl_fd.c
 
 SRCS_B	= //бонусные функции
 
