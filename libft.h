@@ -6,7 +6,7 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 11:41:52 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/23 18:02:57 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/23 18:51:16 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -59,4 +59,5 @@ t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 #endif
