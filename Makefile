@@ -6,7 +6,7 @@
 #    By: mlarra <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/19 11:55:00 by mlarra            #+#    #+#              #
-#    Updated: 2021/10/22 16:15:33 by mlarra           ###   ########.fr        #
+#    Updated: 2021/10/23 14:59:29 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS	= ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c\
 		  ft_strmapi.c	ft_striteri.c	ft_putchar_fd.c	ft_putstr_fd.c\
 		  ft_putendl_fd.c				ft_putnbr_fd.c
 
-SRCS_B	= //бонусные функции
+SRCS_B	= ft_lstnew.c
 
 HEADER	= libft.h
 
@@ -38,21 +38,21 @@ RM	= rm -f
 
 .PHONY:	all clean fclean re bonus
 
-.o:	%.c ${HEADER}
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+.o		:	%.c ${HEADER}
+			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS} ${HEADER}
-		ar rcs ${NAME} $?
+${NAME}	:	${OBJS} ${HEADER}
+			ar rcs ${NAME} $?
 
-all:	${NAME}
+all		:	${NAME}
 
-clean:
-	${RM} ${OBJS}
+clean	:
+			${RM} ${OBJS}
 
-fclean:	clean
-	${RM} ${NAME}
+fclean	:	clean
+			${RM} ${NAME}
 	
-re:	fclean all
+re		:	fclean all
 
-bonus:
-	make OBJS="${OBJS_B}" all
+bonus	:	${OBJS_B}
+			make OBJS="${OBJS_B}" all
