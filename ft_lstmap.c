@@ -6,7 +6,7 @@
 /*   By: mlarra <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 16:42:10 by mlarra            #+#    #+#             */
-/*   Updated: 2021/10/24 19:11:29 by mlarra           ###   ########.fr       */
+/*   Updated: 2021/10/24 19:41:56 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!new_lst)
 		{
 			ft_lstclear(&begin, del);
-			return NULL;
+			return (NULL);
 		}
 		ft_lstadd_back(&begin, new_lst);
 		lst = lst -> next;
-	//	new_lst = new_lst -> next;
 	}
 	return (begin);
 }
